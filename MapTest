@@ -1,0 +1,32 @@
+public class MapTest{
+
+@Test
+public void test()
+{
+Map map=new HashMap();
+map.put("aa",113);//添加 
+System.out.pintln(map);
+map.put("aa",88);
+//修改
+//remove移除
+//存在返回值。不存在返回null
+Object value=map.remove("aa");
+System.out.pintln(value);
+map.clear();//map=null不同
+System.out.pintln(map);
+}
+@Test
+public void test1(){
+Map map=new HashMap();
+map.put("aa",113);//添加 
+System.out.pintln(map);
+map.put("aa",88);
+System.out.pintln(map.get(88));
+map.containsKey("aa");//返回boolean值
+map.containsValue(88);//即使有多个，找到第一个之后就不找
+map.isEmpty();
+}
+}
+
+
+
