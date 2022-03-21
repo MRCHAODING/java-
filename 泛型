@@ -1,0 +1,57 @@
+package day1;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+import org.junit.Test;
+
+public class Testt {
+@Test
+public void test() {
+	 ArrayList list=new  ArrayList();
+	 list.add(87);
+	 list.add(83);
+	 list.add(82);
+	 list.add(81);
+	 list.add("to");
+	 for(Object score:list) {
+		 int stu=(Integer)score;
+		 System.out.println(stu);
+	 }
+}
+@Test
+public void test1() {
+	 ArrayList<Integer> list=new  ArrayList<Integer>();
+	 list.add(87);
+	 list.add(83);
+	 list.add(82);
+	 list.add(81);
+	 
+	 for(Object score:list) {
+		 int stu=(Integer)score;
+		 System.out.println(stu);
+	 }
+	 java.util.Iterator<Integer> it= list.iterator();
+	 while(it.hasNext()) {
+		 System.out.println(it.next());
+	 } 
+}
+@Test
+public void test2() {
+    Map<String, Integer> map=new HashMap<String, Integer>();
+    //     key     value
+    map.put("m", 3);
+    map.put("h", 3);
+    map.put("j", 2);
+    Set<Entry<String,Integer>> entrySet = map.entrySet();
+    java.util.Iterator<Entry<String, Integer>> iterator = entrySet.iterator();
+	 while(iterator.hasNext()) {
+		 System.out.println(iterator.next().getValue());
+	 } 
+}
+}
